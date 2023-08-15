@@ -10,7 +10,6 @@ def ozon_parse(request):
         if form.is_valid():
             id_user = form.cleaned_data.get('id_user')
             api_key = form.cleaned_data.get('api_key')
-            print(id_user, api_key)
             task_parse.delay(id_user=id_user, api_key=api_key)
     else:
         form = ParseForm()

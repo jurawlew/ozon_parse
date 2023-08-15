@@ -20,7 +20,6 @@ def task_parse(id_user, api_key):
             "to": to_date,
         }
     }
-    print(id_user, api_key, from_date, to_date)
     response = requests.post(url, headers=headers, json=json_body)
 
     client = Client(host='localhost')
